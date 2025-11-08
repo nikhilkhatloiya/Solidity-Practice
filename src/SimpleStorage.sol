@@ -18,8 +18,6 @@ contract SimpleStorage{
         string name;
     }
 
-    Person public Tom = Person({favouriteNumber: 12, name: "Nikhil"});
-
     Person[] public listOfPeople;
 
     mapping(uint256 => string) public numberToName;
@@ -34,7 +32,7 @@ contract SimpleStorage{
 
     function addPerson(uint256 num, string memory name) public
     {
-        listOfPeople.push(Person(num, name));
+        // listOfPeople.push(Person(num, name));
         numberToName[num] = name;
     }
     
